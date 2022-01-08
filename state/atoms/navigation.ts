@@ -4,8 +4,8 @@ import {CalendarIcon, ChartBarIcon, FolderIcon, HomeIcon, InboxIcon, UsersIcon} 
 export const navigationState = atom({
     key: 'navigationState',
     default: [
+        { name: 'Team', href: '/yourgroup', icon: UsersIcon, current: false },
         { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-        { name: 'Team', href: '#', icon: UsersIcon, current: false },
         { name: 'Projects', href: '#', icon: FolderIcon, current: false },
         { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
         { name: 'Documents', href: '#', icon: InboxIcon, current: false },
