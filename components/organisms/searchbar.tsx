@@ -7,6 +7,7 @@ import {useRecoilState} from "recoil";
 import {sidebarState} from "../../state/atoms/sidebar";
 import {userNavigationState} from "../../state/atoms/navigation";
 import UserMenu from "../molecules/userMenu";
+import Image from "next/image";
 
 function Searchbar(props) {
     const [sidebarOpen, setSidebarOpen] = useRecoilState(sidebarState)
@@ -57,10 +58,13 @@ function Searchbar(props) {
                             <Menu.Button
                                 className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                 <span className="sr-only">Open user menu</span>
-                                <img
+                                <Image
                                     className="h-8 w-8 rounded-full"
                                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                                     alt=""
+                                    width={50}
+                                    height={50}
+
                                 />
                             </Menu.Button>
                         </div>

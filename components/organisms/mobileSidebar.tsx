@@ -6,7 +6,7 @@ import {useRecoilState} from "recoil";
 import {sidebarState} from "../../state/atoms/sidebar";
 import {navigationState} from "../../state/atoms/navigation";
 import MobileSidebarItem from "../atoms/mobileSidebarItem";
-
+import Image from "next/image";
 function MobileSidebar(props) {
     const [sidebarOpen, setSidebarOpen] = useRecoilState(sidebarState)
     const [navigation, setNavigation] = useRecoilState(navigationState)
@@ -56,10 +56,11 @@ function MobileSidebar(props) {
                             </div>
                         </Transition.Child>
                         <div className="flex-shrink-0 flex items-center px-4">
-                            <img
+                            <Image
                                 className="h-8 w-auto"
                                 src="https://tailwindui.com/img/logos/workflow-logo-indigo-300-mark-white-text.svg"
                                 alt="Workflow"
+                                height={50} width={300}
                             />
                         </div>
                         <div className="mt-5 flex-1 h-0 overflow-y-auto">
