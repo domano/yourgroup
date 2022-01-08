@@ -1,7 +1,6 @@
 import React from 'react';
 import {useRecoilState} from "recoil";
 import {navigationState} from "../../state/atoms/navigation";
-import classNames from "../../util/classNames";
 import DesktopSidebarItem from "../atoms/desktopSidebarItem";
 
 function DesktopSidebar(props) {
