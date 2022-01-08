@@ -6,7 +6,7 @@ import {
     useRecoilState,
     useRecoilValue,
 } from 'recoil';
-import Layout from "../components/layout";
+import Layout from "../components/templates/layout";
 
 function MyApp({Component, pageProps}) {
     return <RecoilRoot>
