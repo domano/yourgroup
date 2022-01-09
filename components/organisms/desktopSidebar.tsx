@@ -1,11 +1,11 @@
 import React from 'react';
-import {useRecoilState} from "recoil";
+import {useAtom} from "jotai";
 import {navigationState} from "../../state/atoms/navigation";
 import DesktopSidebarItem from "../atoms/desktopSidebarItem";
 import Image from 'next/image'
 
 function DesktopSidebar(props) {
-    const [navigation, setNavigation] = useRecoilState(navigationState)
+    const [navigation, setNavigation] = useAtom(navigationState)
 
     return (
         <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
