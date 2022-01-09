@@ -2,13 +2,13 @@ import React from 'react';
 import {BellIcon, MenuAlt2Icon} from "@heroicons/react/outline";
 import {SearchIcon} from "@heroicons/react/solid";
 import {Menu, Transition} from "@headlessui/react";
-import {useRecoilState} from "recoil";
+import {useAtom} from "jotai";
 import {sidebarState} from "../../state/atoms/sidebar";
 import UserMenu from "../molecules/userMenu";
 import Image from "next/image";
 
 function Searchbar(props) {
-    const [sidebarOpen, setSidebarOpen] = useRecoilState(sidebarState)
+    const [sidebarOpen, setSidebarOpen] = useAtom(sidebarState)
 
     return (
         <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white shadow">

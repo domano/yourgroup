@@ -1,13 +1,13 @@
 import React, {Fragment} from 'react';
 import {Menu} from "@headlessui/react";
 import classNames from "../../util/classNames";
-import {useRecoilState} from "recoil";
+import {useAtom} from "jotai";
 import {userNavigationState} from "../../state/atoms/navigation";
 import {Transition} from "@headlessui/react";
 
 
 function UserMenu(props) {
-    const [userNavigation, setUserNavigation] = useRecoilState(userNavigationState)
+    const [userNavigation, setUserNavigation] = useAtom(userNavigationState)
 
     return (
         <Transition

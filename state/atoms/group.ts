@@ -1,8 +1,6 @@
-import {atom} from "recoil";
+import {atom} from "jotai";
 
-export const groupState = atom({
-    key: 'groupState',
-    default: [
+export const groupState = atom([
         {
             id: "someuuid",
             name: 'Leslie Alexander',
@@ -37,4 +35,4 @@ export const groupState = atom({
         },
         // More people...
     ]
-})
+)

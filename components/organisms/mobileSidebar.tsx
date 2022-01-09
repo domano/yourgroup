@@ -2,14 +2,14 @@ import React, {Fragment} from 'react';
 import {Dialog, Transition} from "@headlessui/react";
 import {XIcon} from "@heroicons/react/outline";
 import classNames from "../../util/classNames";
-import {useRecoilState} from "recoil";
+import {useAtom} from "jotai";
 import {sidebarState} from "../../state/atoms/sidebar";
 import {navigationState} from "../../state/atoms/navigation";
 import MobileSidebarItem from "../atoms/mobileSidebarItem";
 import Image from "next/image";
 function MobileSidebar(props) {
-    const [sidebarOpen, setSidebarOpen] = useRecoilState(sidebarState)
-    const [navigation, setNavigation] = useRecoilState(navigationState)
+    const [sidebarOpen, setSidebarOpen] = useAtom(sidebarState)
+    const [navigation, setNavigation] = useAtom(navigationState)
 
     return (
         <Transition.Root show={sidebarOpen} as={Fragment}>
